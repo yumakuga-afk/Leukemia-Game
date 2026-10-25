@@ -18,7 +18,8 @@ public class TaskManager : MonoBehaviour
     public List<TaskBar> Tasks => tasks;
     public int Count => tasks.Count;
     [SerializeField] private TMP_Text taskText;
-
+    [SerializeField] private GameObject minibook;
+    [SerializeField] private GameObject mainBook;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,8 +28,8 @@ public class TaskManager : MonoBehaviour
             return;
         }
         Instance = this;
-        //AddTask("Welcome", "Welcome to the game! Complete tasks to progress.");
-        //AddTask("Test Two", "We LOVE CHILIES!");
+       AddTask("Welcome", "Welcome to the game! Complete tasks to progress.");
+       AddTask("Test Two", "We LOVE CHILIES!");
     }
 
     private void OnDestroy()
@@ -70,8 +71,16 @@ public class TaskManager : MonoBehaviour
                 lines.Add($"{t.Name}: {t.Description}");
         }
 
-        taskText.text = string.Join("\n", lines);
+        taskText.text = string.Join("\n ", lines);
     }
     public TaskBar GetTask(string name) => tasks.Find(t => t.Name == name);
-
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            minibook.SetActive(!minibook.activeSelf);
+            mainBook.SetActive(!mainBook.activeSelf);
+        }
+    }
 }

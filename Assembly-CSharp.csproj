@@ -60,10 +60,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Scripts\PlayerController2D.cs" />
+    <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\Scripts\Interactable2D.cs" />
     <Compile Include="Assets\Scripts\TaskBar.cs" />
     <Compile Include="Assets\Scripts\TaskManager.cs" />
+    <Compile Include="Assets\Scripts\Dialouge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1119,6 +1122,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="InkEditor.csproj">
+      <Project>{E87B6962-D629-F603-57AF-025819C6A48D}</Project>
+      <Name>InkEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Ink-Libraries.csproj">
+      <Project>{327F805A-B29C-61FA-8F61-A0910062440F}</Project>
+      <Name>Ink-Libraries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

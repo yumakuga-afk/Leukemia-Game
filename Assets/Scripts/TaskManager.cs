@@ -10,6 +10,8 @@ public class TaskManager : MonoBehaviour
     /*
      * To add a task, call TaskManager.Instance.AddTask("Task Name", "Task Description");
      * To remove a task, call TaskManager.Instance.RemoveTask("Task Name");
+     * A task is active if it is in the list of tasks. You can check if a task is active by calling TaskManager.Instance.GetTask("Task Name") and checking if the result is not null.
+     * When facing NPC Call interactionbool() to show the interaction prompt. Call it again to hide the prompt.
      */
     public static TaskManager Instance { get; private set; }
 
@@ -20,6 +22,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private TMP_Text taskText;
     [SerializeField] private GameObject minibook;
     [SerializeField] private GameObject mainBook;
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -82,5 +85,9 @@ public class TaskManager : MonoBehaviour
             minibook.SetActive(!minibook.activeSelf);
             mainBook.SetActive(!mainBook.activeSelf);
         }
+        
+        
     }
+
+    
 }

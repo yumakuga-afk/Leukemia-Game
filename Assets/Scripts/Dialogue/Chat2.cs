@@ -20,6 +20,7 @@ public class Chat2 : MonoBehaviour
         chatbox = GetComponent<TMP_Text>();
         text = new string[] {
             "Detective: Rie! It's a pleasure to meet you Rie!",
+            "Assistant researcher Rie reporting for duty!.",
             "Detective: Sorry I’m late! What a delay, huh?",
             "Rie: Detective, you’re not from around here are you?",
             "Detective: Sorry, no. I'm not from around here.",

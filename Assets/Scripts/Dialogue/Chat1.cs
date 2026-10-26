@@ -15,7 +15,7 @@ public class Chat1 : MonoBehaviour
         //Gets the text component in the child box so we can set text to it
         chatbox = GetComponent<TMP_Text>();
         text = new string[] {
-            "???: Pleasure to meet you, detective! Assistant researcher Rie reporting in.",
+            "???: Pleasure to meet you, detective!",
             "Detective: It's a pleasure to meet you! Err...",
             "(It looks like the detective is having trouble remembering the name of who they're here to meet. Help remind them by checking the request.)",
             "*Tutorial: Detective Notebook*",

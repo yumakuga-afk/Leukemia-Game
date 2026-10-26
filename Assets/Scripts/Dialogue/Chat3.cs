@@ -42,7 +42,7 @@ public class Chat3 : MonoBehaviour
             "Detective: Introductions!",
             "Detective: I'm the Detective, and this is Rie.",
             "Rie: Nice to meet you.",
-            "Bo: You can call me Bo",
+            "Bo: You can call me Bo.",
             "Detective: Then, Bo, we're on the case!"           
         };
         //"Player 1:\r\n \r\n So he will. To start, click on the Iron element behind me."
@@ -53,7 +53,7 @@ public class Chat3 : MonoBehaviour
     {
         if(tracker + 1 == text.Length)
         {
-            GameObject dimmer = GameObject.Find("Second Cutscene");
+            GameObject dimmer = GameObject.Find("Third Cutscene");
             dimmer.SetActive(false);
             Notebook.SetActive(true);
             TaskList.AddTask("\r\n*Case #3: Demo Discovery* \r\n \r\n Find the Delayed Delivery. \r\n \r\n Bo is at her wit’s end waiting for her package to be delivered. Help her find it! \r\n Client: Bo");

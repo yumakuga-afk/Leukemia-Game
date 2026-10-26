@@ -70,9 +70,11 @@
     <Compile Include="Assets\Scripts\BackgroundController.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Chat5.cs" />
     <Compile Include="Assets\Scripts\Notebook\GameStateManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Chat8.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Chat6.cs" />
+    <Compile Include="Assets\Scripts\Cheat Driver.cs" />
     <Compile Include="Assets\Scripts\System\SaveData.cs" />
     <Compile Include="Assets\Scripts\Interactable2D.cs" />
     <Compile Include="Assets\Scripts\Cheat.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Assets\Scripts\TaskBar.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookUI.cs" />
     <Compile Include="Assets\Scripts\Placeholder\QuestDefinition.cs" />
+    <Compile Include="Assets\Scripts\Spawner2.cs" />
     <Compile Include="Assets\Scripts\Despawner.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Chat2.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookEntry.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Assets\Scripts\Dialogue\Chat4.cs" />
     <Compile Include="Assets\Scripts\Dialouge.cs" />
     <Compile Include="Assets\Scripts\Event1.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Chat7.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookWorldEvent.cs" />
     <Compile Include="Assets\Scripts\System\SaveManager.cs" />
   </ItemGroup>

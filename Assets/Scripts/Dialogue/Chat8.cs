@@ -8,7 +8,6 @@ public class Chat8 : MonoBehaviour
     int tracker;
     TMP_Text chatbox;
     string[] text;
-    [SerializeField] GameObject invisiblewall;
 
     private void Awake()
     {
@@ -35,10 +34,7 @@ public class Chat8 : MonoBehaviour
     {
         if(tracker + 1 == text.Length)
         {
-            GameObject dimmer = GameObject.Find("Investigation End Cutscene");
-            dimmer.SetActive(false);
-            invisiblewall.SetActive(false);
-            PlayerController2D.playeractive = true;
+    
         }
         else{
             chatbox.text = text[tracker + 1];

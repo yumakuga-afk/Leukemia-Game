@@ -22,6 +22,8 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private TMP_Text taskText;
     [SerializeField] private GameObject minibook;
     [SerializeField] private GameObject mainBook;
+    [SerializeField] GameObject Chatbox;
+    [SerializeField] GameObject Chatbox2;
     
     private void Awake()
     {
@@ -31,8 +33,8 @@ public class TaskManager : MonoBehaviour
             return;
         }
         Instance = this;
-       AddTask("Welcome", "Welcome to the game! Complete tasks to progress.");
-       AddTask("Test Two", "We LOVE CHILIES!");
+       AddTask("*Case #1: ???* \r\n \r\n Vein Transport System Platform 3 at 8:00. \r\n \r\n A white blood cell named Rie will be waiting to receive you. \r\n \r\n Please, save the city. \r\n Client: ???");
+       //AddTask(" \r\n Test Two", "We LOVE CHILIES!");
     }
 
     private void OnDestroy()
@@ -84,8 +86,21 @@ public class TaskManager : MonoBehaviour
         {
             minibook.SetActive(!minibook.activeSelf);
             mainBook.SetActive(!mainBook.activeSelf);
+            if (Cheat.count == 2)
+            {
+                Chatbox2.SetActive(true);
+                Cheat.count = 3;
+            }
+            if (Cheat.count == 1)
+            {
+                Chatbox.SetActive(false);
+                Cheat.count = 2;
+            }
         }
-        
+        if (mainBook.activeSelf)
+        {
+            minibook.SetActive(false);
+        }
         
     }
 

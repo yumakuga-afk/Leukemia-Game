@@ -8,6 +8,7 @@ public class Chat1 : MonoBehaviour
     int tracker;
     TMP_Text chatbox;
     string[] text;
+    [SerializeField] GameObject NotebookButton;
 
     private void Awake()
     {
@@ -27,6 +28,11 @@ public class Chat1 : MonoBehaviour
     }
     void OnMouseDown()
     {
+        if(tracker + 2 == text.Length)
+        {
+            NotebookButton.SetActive(true);
+            Cheat.count = 1;
+        }
         if(tracker + 1 == text.Length)
         {
             GameObject dimmer = GameObject.Find("First Cutscene");

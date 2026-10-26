@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ad28111bd2a724aaec5fec48c42d26, type: 3}
+  m_Name: TestNPC
+  m_EditorClassIdentifier: 
+  entryID: Test_NPC
+  entryTitle: Test NPC
+  category: 4
+  entryIcon: {fileID: 0}
+  description: 'Name: Test
+
+    Biological Identity: TEST NPC
+
+
+    Function:
+
+    Discription
+    goes here
+
+
+    Current Concirn:
+
+    Description goes here'
+  unlockConditions:
+    logic: 0
+    conditions:
+    - conditionType: 2
+      conditionID: npc:Test_NPC:met
+      invertCondition: 0
+  additionalSections:
+  - sectionID: Test_hint_0
+    sectionTitle: Hint name
+    sectionContent: Discription goes here
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 2
+        conditionID: npc:Test_NPC:hint:0
+        invertCondition: 0
+  - sectionID: Test_hint_1
+    sectionTitle: Hint name
+    sectionContent: Description goes here
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 2
+        conditionID: npc:Test_NPC:hint:1
+        invertCondition: 0
+  - sectionID: Test_hint_2
+    sectionTitle: Hint Name
+    sectionContent: Description goes here
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 0
+        conditionID: npc:Test_NPC:hint:2
+        invertCondition: 0

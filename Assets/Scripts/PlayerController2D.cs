@@ -5,6 +5,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController2D : MonoBehaviour
 {
+    //Additions to shortcut/cheat to get out playable demo.
+    public static bool playeractive = true;
+
+
     [Header("Input Actions")]
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference jumpAction;
@@ -84,6 +88,14 @@ public class PlayerController2D : MonoBehaviour
     {
         ReadMovement();
         UpdateFacingDirection();
+        if (playeractive == true)
+        {
+            OnEnable();
+        }
+        if (playeractive == false)
+        {
+            OnDisable();
+        }
     }
 
     private void FixedUpdate()

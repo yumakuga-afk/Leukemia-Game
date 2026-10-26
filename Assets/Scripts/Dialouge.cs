@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
-using UnityEngine.EventSystems ;
+using UnityEngine.EventSystems;
 
 public class Dialouge : MonoBehaviour
 {

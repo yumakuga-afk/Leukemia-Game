@@ -72,11 +72,13 @@
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\Scripts\System\SaveData.cs" />
     <Compile Include="Assets\Scripts\Interactable2D.cs" />
+    <Compile Include="Assets\Scripts\Cheat.cs" />
     <Compile Include="Assets\Scripts\Placeholder\QuestManager.cs" />
     <Compile Include="Assets\Scripts\Driver.cs" />
     <Compile Include="Assets\Scripts\TaskBar.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookUI.cs" />
     <Compile Include="Assets\Scripts\Placeholder\QuestDefinition.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Chat2.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookEntry.cs" />
     <Compile Include="Assets\Scripts\Placeholder\NPCJournalInteraction.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookManager.cs" />

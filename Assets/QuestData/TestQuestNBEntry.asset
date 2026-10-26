@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ad28111bd2a724aaec5fec48c42d26, type: 3}
+  m_Name: TestQuestNBEntry
+  m_EditorClassIdentifier: 
+  entryID: Test_Quest_NB_Entry
+  entryTitle: Test Quest
+  category: 0
+  entryIcon: {fileID: 0}
+  description: Description goes here
+  unlockConditions:
+    logic: 0
+    conditions:
+    - conditionType: 2
+      conditionID: quest:Test_Quest:accepted
+      invertCondition: 0
+  additionalSections:
+  - sectionID: Objective_1
+    sectionTitle: Objective 1
+    sectionContent: 
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 2
+        conditionID: quest:Test_Quest:objective:1
+        invertCondition: 0
+  - sectionID: Objective_2
+    sectionTitle: Objective 2
+    sectionContent: 
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 2
+        conditionID: quest:Test_Quest:objective:2
+        invertCondition: 0
+  - sectionID: Objective_3
+    sectionTitle: Objective 3
+    sectionContent: 
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 2
+        conditionID: quest:Test_Quest:objective:3
+        invertCondition: 0
+  - sectionID: Quest_Complete
+    sectionTitle: Quest Complete
+    sectionContent: 
+    unlockConditions:
+      logic: 0
+      conditions:
+      - conditionType: 2
+        conditionID: quest:Test_Quest:completed
+        invertCondition: 0

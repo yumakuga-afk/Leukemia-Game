@@ -36,6 +36,8 @@ public class PlayerController2D : MonoBehaviour
     private bool isGrounded;
     private Vector2 facingDirection = Vector2.right;
 
+    public bool investigating = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -180,7 +182,14 @@ public class PlayerController2D : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        Interact();
+        investigating = true;
+        Invoke("CeaseInvestigation", 0.2f);
+        //Interact();
+    }
+
+    void CeaseInvestigation()
+    {
+        investigating = false;
     }
 
     private void Interact()

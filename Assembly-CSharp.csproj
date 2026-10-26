@@ -68,9 +68,11 @@
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Scripts\PlayerController2D.cs" />
     <Compile Include="Assets\Scripts\BackgroundController.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Chat5.cs" />
     <Compile Include="Assets\Scripts\Notebook\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Chat6.cs" />
     <Compile Include="Assets\Scripts\System\SaveData.cs" />
     <Compile Include="Assets\Scripts\Interactable2D.cs" />
     <Compile Include="Assets\Scripts\Cheat.cs" />
@@ -87,7 +89,9 @@
     <Compile Include="Assets\Scripts\TaskManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Chat3.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookCondition.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Chat4.cs" />
     <Compile Include="Assets\Scripts\Dialouge.cs" />
+    <Compile Include="Assets\Scripts\Event1.cs" />
     <Compile Include="Assets\Scripts\Notebook\NotebookWorldEvent.cs" />
     <Compile Include="Assets\Scripts\System\SaveManager.cs" />
   </ItemGroup>

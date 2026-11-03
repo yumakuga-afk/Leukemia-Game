@@ -33,7 +33,7 @@ public class TaskManager : MonoBehaviour
             return;
         }
         Instance = this;
-       AddTask("*Case #1: ???* \r\n \r\n Vein Transport System Platform 3 at 8:00. \r\n \r\n A white blood cell named Rie will be waiting to receive you. \r\n \r\n Please, save the city. \r\n Client: ???");
+       AddTask("*Case #1: ???* \r\n \r\n Vascular Transport System Platform 3 at 8:00. \r\n \r\n A white blood cell named Rie will be waiting to receive you. \r\n \r\n Please, save the city. \r\n Client: ???");
        //AddTask(" \r\n Test Two", "We LOVE CHILIES!");
     }
 

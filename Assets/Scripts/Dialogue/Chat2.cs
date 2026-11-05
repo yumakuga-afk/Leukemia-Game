@@ -10,12 +10,14 @@ public class Chat2 : MonoBehaviour
     string[] text;
     [SerializeField] GameObject NotebookCanvas;
     TaskManager TaskList;
+    ObservationManager ObservationList;
     [SerializeField] GameObject Notebook;
     [SerializeField] GameObject CutsceneTrigger;
 
     private void Awake()
     {
         TaskList = NotebookCanvas.GetComponent<TaskManager>();
+        ObservationList = NotebookCanvas.GetComponent<ObservationManager>();
         //Gets the text component in the child box so we can set text to it
         chatbox = GetComponent<TMP_Text>();
         text = new string[] {
@@ -55,6 +57,8 @@ public class Chat2 : MonoBehaviour
             dimmer.SetActive(false);
             Notebook.SetActive(true);
             TaskList.AddTask("\r\n*Case #2: New in Town* \r\n \r\n Accompany Rie on a walk through the Radiant City. \r\n Client: Rie");
+            ObservationList.AddTask("\r\n*Routine Delays* \r\n \r\n Trains are running late on the VTS, running behind up to an hour. What could be causing it?");
+            ObservationList.AddTask("\r\n*Incompetent Management* \r\n \r\n Apparently the people in charge are having trouble keeping things straight. We'll have to keep that in mind when dealing with them in the future.");
             CutsceneTrigger.SetActive(false);
             PlayerController2D.playeractive = true;
         }

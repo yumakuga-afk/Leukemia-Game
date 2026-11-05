@@ -73,7 +73,9 @@
     <Compile Include="Assets\Scripts\Dialogue\Chat8.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
+    <Compile Include="Assets\Scripts\ObservationManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Chat6.cs" />
+    <Compile Include="Assets\Scripts\Changer.cs" />
     <Compile Include="Assets\Scripts\Cheat Driver.cs" />
     <Compile Include="Assets\Scripts\System\SaveData.cs" />
     <Compile Include="Assets\Scripts\Interactable2D.cs" />

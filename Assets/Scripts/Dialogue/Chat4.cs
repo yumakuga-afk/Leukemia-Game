@@ -8,9 +8,12 @@ public class Chat4 : MonoBehaviour
     int tracker;
     TMP_Text chatbox;
     string[] text;
+    [SerializeField] GameObject NotebookCanvas;
+    ObservationManager ObservationList;
 
     private void Awake()
     {
+        ObservationList = NotebookCanvas.GetComponent<ObservationManager>();
         //Gets the text component in the child box so we can set text to it
         chatbox = GetComponent<TMP_Text>();
         text = new string[] {
@@ -41,6 +44,7 @@ public class Chat4 : MonoBehaviour
         {
             GameObject dimmer = GameObject.Find("Bo Cutscene");
             dimmer.SetActive(false);
+            ObservationList.AddTask("\r\n*Vacant Vessel* \r\n \r\n "); //Tubes called vessels Empty Why
             PlayerController2D.playeractive = true;
             Cheat.count += 1;
         }

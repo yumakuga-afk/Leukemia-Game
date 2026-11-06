@@ -44,7 +44,7 @@ public class Chat4 : MonoBehaviour
         {
             GameObject dimmer = GameObject.Find("Bo Cutscene");
             dimmer.SetActive(false);
-            ObservationList.AddTask("\r\n*Vacant Vessel* \r\n \r\n "); //Tubes called vessels Empty Why
+            ObservationList.AddTask("\r\n*Vacant Vessel* \r\n \r\n Vessels are delivery superhighways. To see one with nothing in it is strange, very strange."); //Tubes called vessels Empty Why
             PlayerController2D.playeractive = true;
             Cheat.count += 1;
         }

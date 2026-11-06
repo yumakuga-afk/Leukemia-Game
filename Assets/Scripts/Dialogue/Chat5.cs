@@ -34,7 +34,7 @@ public class Chat5 : MonoBehaviour
         {
             GameObject dimmer = GameObject.Find("Rie Cutscene");
             dimmer.SetActive(false);
-            ObservationList.AddTask("\r\n*A-Line Vessel* \r\n \r\n ");
+            ObservationList.AddTask("\r\n*A-Line Vessel* \r\n \r\n A type of vessel that carries deliveries away from the Windworks. If we find the Windworks, we'll be one step closer to solving the mystery!");
             PlayerController2D.playeractive = true;
             Cheat.count += 1;
         }

@@ -8,9 +8,12 @@ public class Chat5 : MonoBehaviour
     int tracker;
     TMP_Text chatbox;
     string[] text;
+    [SerializeField] GameObject NotebookCanvas;
+    ObservationManager ObservationList;
 
     private void Awake()
     {
+        ObservationList = NotebookCanvas.GetComponent<ObservationManager>();
         //Gets the text component in the child box so we can set text to it
         chatbox = GetComponent<TMP_Text>();
         text = new string[] {
@@ -31,6 +34,7 @@ public class Chat5 : MonoBehaviour
         {
             GameObject dimmer = GameObject.Find("Rie Cutscene");
             dimmer.SetActive(false);
+            ObservationList.AddTask("\r\n*A-Line Vessel* \r\n \r\n A type of vessel that carries deliveries away from the Windworks. If we find the Windworks, we'll be one step closer to solving the mystery!");
             PlayerController2D.playeractive = true;
             Cheat.count += 1;
         }

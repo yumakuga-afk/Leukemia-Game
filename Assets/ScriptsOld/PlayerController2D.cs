@@ -13,6 +13,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference jumpAction;
     [SerializeField] private InputActionReference interactAction;
+    [SerializeField] Animator anim;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -118,9 +119,8 @@ public class PlayerController2D : MonoBehaviour
             horizontalInput = 0f;
             return;
         }
-
         Vector2 movement = moveAction.action.ReadValue<Vector2>();
-
+        if(movement == Vector2.zero) {anim.Play("DetectiveIdle");} else {anim.Play("DetectiveWalk");}
         horizontalInput = Mathf.Clamp(movement.x, -1f, 1f);
     }
 

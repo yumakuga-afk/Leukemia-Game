@@ -8,9 +8,12 @@ public class Chat6 : MonoBehaviour
     int tracker;
     TMP_Text chatbox;
     string[] text;
+    [SerializeField] GameObject NotebookCanvas;
+    ObservationManager ObservationList;
 
     private void Awake()
     {
+        ObservationList = NotebookCanvas.GetComponent<ObservationManager>();
         //Gets the text component in the child box so we can set text to it
         chatbox = GetComponent<TMP_Text>();
         text = new string[] {
@@ -28,6 +31,7 @@ public class Chat6 : MonoBehaviour
         {
             GameObject dimmer = GameObject.Find("Sign Cutscene");
             dimmer.SetActive(false);
+            ObservationList.AddTask("\r\n*General Location* \r\n \r\n Right now we're between the VTS and the Pulmonary Windworks. Looks like we're still a long ways away from the Lymphatic Outpost.");
             PlayerController2D.playeractive = true;
             Cheat.count += 1;
         }

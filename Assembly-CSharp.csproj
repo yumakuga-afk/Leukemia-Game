@@ -68,6 +68,7 @@
     <Compile Include="Assets\ScriptsOld\Driver.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat6.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
+    <Compile Include="Assets\Script\Data\ScriptableGuidObject.cs" />
     <Compile Include="Assets\ScriptsOld\Notebook\NotebookWorldEvent.cs" />
     <Compile Include="Assets\Script\Core\Inventory.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat8.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\ScriptsOld\Placeholder\NPCJournalInteraction.cs" />
     <Compile Include="Assets\ScriptsOld\Placeholder\QuestManager.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat7.cs" />
+    <Compile Include="Assets\ScriptsOld\Changer.cs" />
     <Compile Include="Assets\ScriptsOld\PlayerController2D.cs" />
     <Compile Include="Assets\ScriptsOld\System\SaveData.cs" />
     <Compile Include="Assets\Script\Data\GameDatabase.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Assets\ScriptsOld\Notebook\NotebookCondition.cs" />
     <Compile Include="Assets\Script\Bridge\NPCInteractable.cs" />
     <Compile Include="Assets\ScriptsOld\Spawner2.cs" />
+    <Compile Include="Assets\ScriptsOld\ObservationManager.cs" />
     <Compile Include="Assets\Script\Core\GameEvents.cs" />
     <Compile Include="Assets\Script\Core\TaskManager.cs" />
   </ItemGroup>

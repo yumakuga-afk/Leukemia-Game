@@ -6,26 +6,27 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class DialogueUI : MonoBehaviour
 {
     public static DialogueUI Instance;
 
-    [Header("面板")]
+    [Header("Panel")]
     public GameObject panel;
     public TMP_Text speakerText;
     public TMP_Text contentText;
     public GameObject continueIndicator;
     public GameObject choiceContainer;
 
-    [Header("选项")]
+    [Header("Choice")]
     public Button choiceButtonPrefab;
 
-    [Header("点击推进")]
-    public Button clickCatcher;
+    [Header("Press continue")]
+    [SerializeField] private InputActionReference clickCatcher;
 
-    [Header("打字机")]
-    [Tooltip("每个字间隔秒数")]
+    
+    [Tooltip("Seconds between each character")]
     public float charInterval = 0.03f;
 
     
@@ -37,16 +38,21 @@ public class DialogueUI : MonoBehaviour
     {
         Instance = this;
         panel.SetActive(false);
-        clickCatcher.onClick.AddListener(OnClickCatcher);
+       
     }
 
     void OnEnable()
     {
         SpeakerInputLock.OnLockChanged +=ShowDialogue;
+        clickCatcher.action.Enable();
+        clickCatcher.action.performed += OnClickCatcher;
+
     }
     void OnDisable()
     {
         SpeakerInputLock.OnLockChanged -=ShowDialogue;
+        clickCatcher.action.Disable();
+        clickCatcher.action.performed -= OnClickCatcher;
 
     }
 
@@ -139,7 +145,7 @@ public class DialogueUI : MonoBehaviour
     }
 
 
-    private void OnClickCatcher()
+    private void OnClickCatcher(InputAction.CallbackContext context)
     {
 
         if (choiceContainer.activeSelf) return;

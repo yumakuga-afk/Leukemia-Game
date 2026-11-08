@@ -34,17 +34,17 @@ public class WorldState : MonoBehaviour
     }
 
     private void OnTaskAccepted(TaskDefinition t)
-        => SetFlag("task_accepted_" + t.taskId);
+        => SetFlag("task_accepted_" + t.Id);
 
     private void OnTaskCompleted(TaskDefinition t)
     {
-        SetFlag("task_completed_" + t.taskId);
+        SetFlag("task_completed_" + t.Id);
         if (t.changesMap) SetFlag(t.mapFlagKey);
     }
 
     private void OnItemGained(ItemDefinition i)
-        => SetFlag("item_" + i.itemId);
+        => SetFlag("item_" + i.Id);
 
     private void OnInteracted(InteractableDefinition i)
-        => SetFlag("interacted_" + i.interactableId);
+        => SetFlag("interacted_" + i.Id);
 }

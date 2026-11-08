@@ -1,4 +1,4 @@
-// ============ Data/Conditions/TaskStateCondition.cs ============
+// ============ Condition/TaskStateCondition.cs ============
 using UnityEngine;
 public enum TaskState
 {

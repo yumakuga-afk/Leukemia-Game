@@ -15,7 +15,7 @@ public static class InkStateBinder
     {
         var state = TaskManager.Instance.GetState(task);
 
-        story.variablesState[TaskIdVar] = task.taskId;
+        story.variablesState[TaskIdVar] = task.Id; // GUID；当前 Ink 尚未读取此值
         story.variablesState[TaskStateVar] = (float)state;
         story.variablesState[HasRequiredItemsVar] =
             TaskManager.Instance.HasRequiredItems(task) ? 1f : 0f;

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb415482a5ee4774b87f53654b634c70, type: 3}
   m_Name: Int_NPC_Elder
   m_EditorClassIdentifier: 
-  interactableId: npc_elder
+  id: 843e21d320e2ee0439152898c3718bb7

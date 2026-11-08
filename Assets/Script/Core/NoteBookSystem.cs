@@ -25,7 +25,7 @@ public class NotebookSystem : MonoBehaviour
 
             unlocked.Add(note);
             GameEvents.RaiseNoteUnlocked(note);
-            Debug.Log($"[笔记解锁] {note.noteId}");
+            Debug.Log($"[笔记解锁] {note.name}");
         }
     }
 

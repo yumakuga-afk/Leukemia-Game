@@ -15,7 +15,11 @@ public class NPCInteractable : MonoBehaviour
 
     private Story story;
 
-    void Start() => story = new Story(inkJSON.text);
+    void Start()
+    {
+        story = new Story(inkJSON.text);
+        story.BindExternalFunction("hasFlag", (string flag) => (object)WorldState.Instance.HasFlag(flag));
+    }
 
     private bool isTalking;
 

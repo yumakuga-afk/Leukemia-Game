@@ -10,4 +10,10 @@ public abstract class ScriptableGuidObject : ScriptableObject
 
     public string Id => id;
     public bool HasId => !string.IsNullOrEmpty(id);
+
+    [Header("Description")]
+
+    public string description ="";
+
+
 }

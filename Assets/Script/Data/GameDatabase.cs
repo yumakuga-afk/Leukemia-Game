@@ -28,17 +28,17 @@ public class GameDatabase : ScriptableObject
 
     private static T Get<T>(List<T> list, ref Dictionary<string, T> index, string id)
         where T : ScriptableGuidObject
-    {
-        if (string.IsNullOrEmpty(id)) return null;
+         {
+            if (string.IsNullOrEmpty(id)) return null;
 
-        if (index == null)
-        {
-            index = new Dictionary<string, T>();
-            foreach (var item in list)
-                if (item != null && item.HasId && !index.ContainsKey(item.Id))
-                    index[item.Id] = item;
+            if (index == null)
+            {
+                index = new Dictionary<string, T>();
+                foreach (var item in list)
+                    if (item != null && item.HasId && !index.ContainsKey(item.Id))
+                        index[item.Id] = item;
+            }
+
+            return index.TryGetValue(id, out var found) ? found : null;
         }
-
-        return index.TryGetValue(id, out var found) ? found : null;
-    }
 }

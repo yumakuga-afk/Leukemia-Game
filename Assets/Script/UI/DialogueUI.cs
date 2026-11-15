@@ -36,6 +36,8 @@ public class DialogueUI : MonoBehaviour
 
     void Awake()
     {
+        if(Instance !=null)
+            return;
         Instance = this;
         panel.SetActive(false);
        

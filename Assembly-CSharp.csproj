@@ -69,10 +69,12 @@
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat6.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Script\Data\ScriptableGuidObject.cs" />
+    <Compile Include="Assets\Script\InteractableObject.cs" />
     <Compile Include="Assets\ScriptsOld\Notebook\NotebookWorldEvent.cs" />
     <Compile Include="Assets\Script\Core\Inventory.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat8.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat1.cs" />
+    <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\Script\UI\DialogueUI.cs" />
     <Compile Include="Assets\Script\Bridge\DialogueRunner.cs" />
     <Compile Include="Assets\Script\Core\InteractableRegistry.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat2.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\Script\Bridge\InkStateBinder.cs" />
+    <Compile Include="Assets\Script\UI\TaskUI.cs" />
     <Compile Include="Assets\ScriptsOld\BackgroundController.cs" />
     <Compile Include="Assets\Script\Core\WorldState.cs" />
     <Compile Include="Assets\ScriptsOld\Dialouge.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="Assets\Script\Data\GameDatabase.cs" />
     <Compile Include="Assets\Script\Core\SpeakerInputLock.cs" />
     <Compile Include="Assets\Script\Data\ItemDefinition.cs" />
+    <Compile Include="Assets\Script\PlayerInteraction.cs" />
     <Compile Include="Assets\ScriptsOld\Cheat Driver.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat5.cs" />
     <Compile Include="Assets\ScriptsOld\Placeholder\QuestDefinition.cs" />
@@ -102,6 +106,7 @@
     <Compile Include="Assets\ScriptsOld\Notebook\GameStateManager.cs" />
     <Compile Include="Assets\ScriptsOld\TaskBar.cs" />
     <Compile Include="Assets\Script\Condition\TaskStateCondition.cs" />
+    <Compile Include="Assets\Script\UI\ScrollToSelected.cs" />
     <Compile Include="Assets\ScriptsOld\Cheat.cs" />
     <Compile Include="Assets\ScriptsOld\Dialogue\Chat3.cs" />
     <Compile Include="Assets\ScriptsOld\Event1.cs" />

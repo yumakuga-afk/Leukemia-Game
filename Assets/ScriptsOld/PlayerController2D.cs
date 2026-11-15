@@ -12,7 +12,7 @@ public class PlayerController2D : MonoBehaviour
     [Header("Input Actions")]
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference jumpAction;
-    [SerializeField] private InputActionReference interactAction;
+
     [SerializeField] Animator anim;
 
     [Header("Movement")]
@@ -59,11 +59,7 @@ public class PlayerController2D : MonoBehaviour
             jumpAction.action.performed += OnJump;
         }
 
-        if (interactAction != null)
-        {
-            interactAction.action.Enable();
-            interactAction.action.performed += OnInteract;
-        }
+      
     }
 
     private void OnDisable()
@@ -74,11 +70,7 @@ public class PlayerController2D : MonoBehaviour
             jumpAction.action.Disable();
         }
 
-        if (interactAction != null)
-        {
-            interactAction.action.performed -= OnInteract;
-            interactAction.action.Disable();
-        }
+     
 
         if (moveAction != null)
             moveAction.action.Disable();
@@ -176,16 +168,6 @@ public class PlayerController2D : MonoBehaviour
         ) != null;
     }
 
-    // -------------------------
-    // INTERACTION
-    // -------------------------
-
-    private void OnInteract(InputAction.CallbackContext context)
-    {
-        investigating = true;
-        Invoke("CeaseInvestigation", 0.2f);
-        //Interact();
-    }
 
     void CeaseInvestigation()
     {

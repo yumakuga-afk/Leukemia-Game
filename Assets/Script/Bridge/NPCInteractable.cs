@@ -2,7 +2,7 @@
 using Ink.Runtime;
 using UnityEngine;
 
-public class NPCInteractable : MonoBehaviour
+public class NPCInteractable : InteractableObject
 {
     [Header("The NPC itself as an interactive object")]
     public InteractableDefinition selfInteractable;
@@ -15,15 +15,16 @@ public class NPCInteractable : MonoBehaviour
 
     private Story story;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         story = new Story(inkJSON.text);
         story.BindExternalFunction("hasFlag", (string flag) => (object)WorldState.Instance.HasFlag(flag));
     }
 
     private bool isTalking;
-
-    public void Interact()
+    
+    public override void Interact()
     {
         if (isTalking) return;
         isTalking = true;

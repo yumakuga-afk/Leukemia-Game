@@ -75,4 +75,12 @@ public class TaskManager : MonoBehaviour
 
         NotebookSystem.Instance.RefreshAllNotes();
     }
-}
+
+    public List<TaskDefinition> GetTasksByState(TaskState state)
+    {
+        return states
+            .Where(pair => pair.Value == state)
+            .Select(pair => pair.Key)
+            .ToList();
+    }
+    }

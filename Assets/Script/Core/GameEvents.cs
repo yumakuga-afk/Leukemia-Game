@@ -3,6 +3,8 @@ using System;
 
 public static class GameEvents
 {
+    //All Events, like get Task, get Item, have Interacted
+    //
     public static event Action<TaskDefinition> TaskAccepted;
     public static event Action<TaskDefinition> TaskCompleted;
     public static event Action<ItemDefinition> ItemGained;

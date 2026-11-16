@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Linq;
-using UnityEngine.InputSystem;
 
 
 public class TaskUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private GameObject panel;
 
     [SerializeField]
     private RectTransform taskContent;
@@ -29,68 +29,72 @@ public class TaskUI : MonoBehaviour
     private List<TaskDefinition> lastDisplayTask;
     private readonly List<Button> rows = new();
 
-    private bool completedExpanded;
-    private bool refreshPending;
-
-    [SerializeField]
-    private InputActionReference openTask;
+    public bool IsVisible => panel != null && panel.activeSelf;
 
 
 
-    void Start()
+    void Awake()
     {
-        //Get all Accepted task
-        lastDisplayTask = TaskManager.Instance.GetTasksByState(TaskState.Accepted);
+        if (panel != null)
+            panel.SetActive(false);
     }
 
     void OnEnable()
     {
-        
+        GameEvents.TaskAccepted += OnTaskChanged;
+        GameEvents.TaskCompleted += OnTaskChanged;
     }
 
     void OnDisable()
     {
-        
+        GameEvents.TaskAccepted -= OnTaskChanged;
+        GameEvents.TaskCompleted -= OnTaskChanged;
     }
 
+    public void SetVisible(bool visible)
+    {
+        if (panel != null)
+            panel.SetActive(visible);
 
+        if (visible)
+            Refresh();
+    }
 
-    private void BuildRows(TaskManager manager)
-    {   
-        List<TaskDefinition> temp = manager.GetTasksByState(TaskState.Accepted);
-        if(lastDisplayTask != null)
+    private void OnTaskChanged(TaskDefinition task) => Refresh();
+
+    // Rebuild the list of accepted tasks; skip if the list remains unchanged.
+    public void Refresh()
+    {
+        if (TaskManager.Instance == null)
+            return;
+
+        List<TaskDefinition> temp = TaskManager.Instance.GetTasksByState(TaskState.Accepted);
+
+        if (lastDisplayTask != null)
         {
-            bool x = temp.Select(x =>x.Id).OrderBy(x=>x).SequenceEqual(lastDisplayTask.Select(x =>x.Id).OrderBy(x=>x));
-            if(x)
+            bool same = temp.Select(x => x.Id).OrderBy(x => x)
+                .SequenceEqual(lastDisplayTask.Select(x => x.Id).OrderBy(x => x));
+            if (same)
                 return;
         }
-      
+
+        ClearRows();
 
         foreach (var task in temp)
             AddTaskRow(task);
-        
 
-        // This for All Finish Task
-        // var completed = manager.GetTasksByState(TaskState.Completed);
-        // if (completed.Count == 0)
-        //     return;
+        lastDisplayTask = temp;
 
-        // var toggle = AddRow(completedExpanded ? "Unfinish" : "Finish");
+        if (rows.Count > 0)
+            EventSystem.current?.SetSelectedGameObject(rows[0].gameObject);
+    }
 
-        // //bindSelection event
-        // BindSelection(toggle, () => ShowDetails(null));
-
-        // toggle.onClick.AddListener(() =>
-        // {
-        //     completedExpanded = !completedExpanded;
-        //     refreshPending = true;
-        // });
-
-        // if (completedExpanded)
-        // {
-        //     foreach (var task in completed)
-        //         AddTaskRow(task);
-        // }
+    private void ClearRows()
+    {
+        foreach (var row in rows)
+            if (row != null)
+                Destroy(row.gameObject);
+        rows.Clear();
     }
     
 

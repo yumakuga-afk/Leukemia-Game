@@ -9,7 +9,10 @@ public abstract class InteractableObject : MonoBehaviour
         mat = GetComponent<Renderer>().material;
         HideHighlight();
     }
-
+    /// <summary>
+    /// The Effect when object in area
+    /// Need to change
+    /// </summary>
     public void ShowHighlight()
     {
         if(mat !=null)
@@ -24,6 +27,8 @@ public abstract class InteractableObject : MonoBehaviour
              mat.color = new Color(mat.color.r,mat.color.g,mat.color.b, 0f);
         }
     }
+
+
 
     public abstract void Interact();
 }

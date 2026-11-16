@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83fd277cf61784448c308d8d2bb73d8, type: 3}
   m_Name: Task_OldKey
   m_EditorClassIdentifier: 
-  taskId: old_key
+  id: d74df889f8f27c5498080f4e9bb8353e
+  description: Go Find key
   requiredItems:
   - {fileID: 11400000, guid: 3d1790e43058ef34b9bf9aaa3ebeacfe, type: 2}
   requiredInteractables: []
+  title: Old key
+  target: go Idk, but find key
   changesMap: 0
   mapFlagKey: 
